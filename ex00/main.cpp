@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 16:33:10 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/15 14:33:25 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/15 14:37:29 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Number
               {
                   _value = other._value;
               }
+              return *this;
         }
         ~Number() 
         {
@@ -54,6 +55,6 @@ class Number
 
 int main()
 {
-    Number obj1(100);
+    Number obj1();
     return 0;
 }
