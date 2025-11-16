@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:16:52 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/15 16:20:26 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/16 13:07:16 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,17 @@ Fixed::Fixed() : value(0)
 Fixed::Fixed(const Fixed& other)
 {
         std::cout << "Copy constructor called" << std::endl;
-        this->value = other.value 
+        this->value = other.value; 
+}
+
+Fixed &Fixed::operator=(const Fixed& other)
+{
+        std::cout << "Copy assignment operator called" << std::endl;
+        if(this != &other)
+                this->value = other.value;
+        return *this 
+}
+
+Fixed::~Fixed() {
+    std::cout << "Destructor called" << std::endl;
 }
