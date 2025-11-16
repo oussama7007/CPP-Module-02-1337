@@ -1,6 +1,6 @@
 
 
-NAME : Fixed
+NAME = Fixed
 
 CPP = c++ -Wall -Werror -Wextra -std=c++98
 
@@ -17,7 +17,7 @@ ${NAME} : ${OBJ}
 
 
 %.o:%.cpp 	Fixed.h
-	${CPP} ${SRC} -c $< -o $@ 
+	${CPP}  -c $< -o $@ 
 
 
 clean :

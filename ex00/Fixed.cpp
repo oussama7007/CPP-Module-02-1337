@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:16:52 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/16 13:07:16 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/16 16:20:20 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,19 @@ Fixed &Fixed::operator=(const Fixed& other)
         std::cout << "Copy assignment operator called" << std::endl;
         if(this != &other)
                 this->value = other.value;
-        return *this 
+        return *this; 
 }
 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
+}
+
+int Fixed::getRawBits(void) const{
+        std::cout << "getRawBits member function called" << std::endl;
+        return this->value;
+}
+
+void    Fixed::setRawBits(int const raw)
+{
+        this->value = raw;
 }
