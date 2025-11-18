@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:16:52 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/18 12:42:51 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:45:22 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 const int Fixed::fractional_bit = 8;
 
-Fixed::Fixed() : value(3.14)
+Fixed::Fixed() : value(0)
 {
         std::cout << "Default constructor called" << std::endl;
 } 
