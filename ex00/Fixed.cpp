@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:16:52 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/16 16:20:20 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:55:07 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int Fixed::getRawBits(void) const{
 
 void    Fixed::setRawBits(int const raw)
 {
+        std::cout << "----------------Type of this: " << typeid(this).name() << " --------------"<< std::endl;
         this->value = raw;
 }

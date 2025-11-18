@@ -2,7 +2,7 @@
 
 NAME = Fixed
 
-CPP = c++ -Wall -Werror -Wextra -std=c++98
+CPP = c++ -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 OBJ = ${SRC:.cpp=.o}
 
