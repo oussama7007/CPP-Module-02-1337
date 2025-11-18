@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:16:52 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/17 13:55:07 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:42:51 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 const int Fixed::fractional_bit = 8;
 
-Fixed::Fixed() : value(0)
+Fixed::Fixed() : value(3.14)
 {
         std::cout << "Default constructor called" << std::endl;
 } 
@@ -45,6 +45,6 @@ int Fixed::getRawBits(void) const{
 
 void    Fixed::setRawBits(int const raw)
 {
-        std::cout << "----------------Type of this: " << typeid(this).name() << " --------------"<< std::endl;
+        std::cout << "setRawBits member function called" << std::endl;
         this->value = raw;
 }
