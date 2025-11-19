@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:20:24 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/18 14:10:31 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:39:21 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ class Fixed
         Fixed(const Fixed& other); // cp contructor 
         Fixed& operator=(const Fixed& other);   // assignemnt constructor 
         ~Fixed(); // destruc
-        int  getRawBits(void) const;
-        void setRawBits(int const raw);
+        int  getRawBits(void) const;05*        void setRawBits(int const raw);
 };
+
+
 
 
 
