@@ -6,12 +6,13 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:16:05 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/18 17:31:39 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/20 21:21:01 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Fixed.h"
+
 int main( void ) {
 Fixed a;
 Fixed const b( 10 );
