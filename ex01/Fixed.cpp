@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:15:51 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/23 16:38:59 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/23 16:41:28 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@ int     Fixed::getRawBits(void ) const
         return this->value;
 }
 
-// float   Fixed::toFloat( void ) const
-// {
-//         std::cout 
-// }
+float   Fixed::toFloat( void ) const
+{
+        // std::cout <<"toFloat member function called"
+}
 
 
 Fixed::Fixed(const float value) 
 {
     std::cout << "Float constructor called" << std::endl;
-    this->value = roundf(value *(1 << fractional_bits)); 
+    this->value = roundf(value *(1 << fractional_bits));
 }
