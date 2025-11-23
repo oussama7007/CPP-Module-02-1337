@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:15:51 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/18 20:24:45 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/23 15:32:32 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,10 @@ Fixed::Fixed(const float value)
 }
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
+}
+
+Fixed::Fixed(const Fixed& other)
+{
+    std::cout << "Copy constructor called" << std::endl;
+    
 }
