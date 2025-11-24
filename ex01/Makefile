@@ -3,7 +3,7 @@
 
 
 
-NAME : Fixed
+NAME = Fixed
 
 CPP = c++ -Wall -Werror -Wextra -std=c++98
 
