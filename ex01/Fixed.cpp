@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:15:51 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/25 09:53:13 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/25 11:05:46 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,7 @@ int     Fixed::toInt(void) const
     return value >> fractional_bits;
 }
 
-
-
-
-std::ostream& operator<<(std::ostream& out, const Fixed& obj)
+std::ostream& operator<<(std::ofstream& out, const Fixed& obj)
 {
     out << obj.toFloat();
     return out;

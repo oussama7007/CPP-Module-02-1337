@@ -5,7 +5,7 @@
 
 NAME = Fixed
 
-CPP = c++ #-Wall -Werror -Wextra -std=c++98
+CPP = c++ -Wall -Werror -Wextra -std=c++98
 
 OBJ = ${SRC:.cpp=.o}
 

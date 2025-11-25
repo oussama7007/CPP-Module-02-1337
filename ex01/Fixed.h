@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:16:02 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/25 09:22:38 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/25 11:03:41 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ class Fixed
             ~Fixed();
 };
 
-std::ostream& operator<<(std::ostream& out, const Fixed& obj);
+std::ostream& operator<<(std::ofstream& out, const Fixed& obj);
 #endif 
