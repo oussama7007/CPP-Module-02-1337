@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:16:05 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/25 11:03:04 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/25 11:29:12 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int main( void ) {
     std::ofstream myfile("log.txt");
-    Fixed a(244.5f);
-    myfile << a ;
+    Fixed zz(244.5f);
+    myfile << zz;
     Fixed a;
     Fixed const b( 10 );
     Fixed const c( 42.42f );
