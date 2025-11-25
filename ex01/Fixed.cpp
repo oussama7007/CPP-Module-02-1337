@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:15:51 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/25 08:57:46 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/25 09:53:13 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@ Fixed::Fixed(void) : value(0)
         std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const int value) : value(value)
+Fixed::Fixed(const int value) 
 {
     std::cout << "Int constructor called" << std::endl;
+    this->value = value << fractional_bits;
 }
 
-Fixed::~Fixed() {
-    std::cout << "Destructor called" << std::endl;
+Fixed::Fixed(const float value) 
+{
+    std::cout << "Float constructor called" << std::endl;
+    this->value = roundf(value *(1 << fractional_bits));
 }
 
 Fixed::Fixed(const Fixed& other)
@@ -44,35 +47,32 @@ Fixed &Fixed::operator=(const Fixed& other)
 
 void    Fixed::setRawBits(int const raw)
 {
-    std::cout << "setRawBits member function called" << std::endl;
-    this->value = raw;
+    value = raw;
 }
 
 int     Fixed::getRawBits(void ) const
 {
-        std::cout << "getRawBIts member function called" << std::endl;
         return this->value;
 }
 
 float   Fixed::toFloat( void ) const
 {
-        
-        return value / (1 << fractional_bits);
+        return (float)value / (1 << fractional_bits);
 }
 int     Fixed::toInt(void) const 
 {
-    return value / (1 << fractional_bits);
+    return value >> fractional_bits;
 }
 
 
-Fixed::Fixed(const float value) 
-{
-    std::cout << "Float constructor called" << std::endl;
-    this->value = roundf(value *(1 << fractional_bits));
-}
+
 
 std::ostream& operator<<(std::ostream& out, const Fixed& obj)
 {
     out << obj.toFloat();
     return out;
+}
+
+Fixed::~Fixed() {
+    std::cout << "Destructor called" << std::endl;
 }
