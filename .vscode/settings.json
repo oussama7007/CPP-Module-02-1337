@@ -33,6 +33,7 @@
         "limits": "cpp",
         "locale": "cpp",
         "ratio": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "iosfwd": "cpp"
     }
 }

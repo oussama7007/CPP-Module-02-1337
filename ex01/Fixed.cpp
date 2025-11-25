@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:15:51 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/24 15:09:21 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/25 08:57:46 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,10 @@ Fixed::Fixed(const float value)
 {
     std::cout << "Float constructor called" << std::endl;
     this->value = roundf(value *(1 << fractional_bits));
+}
+
+std::ostream& operator<<(std::ostream& out, const Fixed& obj)
+{
+    out << obj.toFloat();
+    return out;
 }
