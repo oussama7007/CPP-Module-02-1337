@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:59:26 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/26 15:37:13 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/11/27 17:19:28 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 #ifndef FIXED_H
 #define FIXED_H
 
-
 #include <iostream>
 #include <cmath>
-
 
 class Fixed
 {
@@ -44,11 +42,22 @@ class Fixed
                         bool operator!=(const Fixed& obj)   const;
 
                 // pre-increment Operators
-		            Fixed operator++();
-		            Fixed operator--();
+		            Fixed& operator++(); // it should return a reference for this case ++(++a)
+		            Fixed& operator--();
 		        // post-increment Operators
-		            Fixed operator++(int);
+		            Fixed operator++(int);  /*
+                                                We need to save the old value BEFORE incrementing
+                                                temp is a local variable that exists only in this function
+                                                Once the function ends, temp is destroyed!
+                                                We CANNOT return a reference to temp because it will be destroyed
+                                                So we return a copy of temp instead
+                                            */
 		            Fixed operator--(int);
+                //the four ov func 
+                    static Fixed& min(Fixed& a, Fixed& b);
+                    static const Fixed& min(const Fixed& a, const Fixed& b);
+                    static Fixed& max(Fixed& a, Fixed& b);
+                    static const Fixed& max(const Fixed& a, const Fixed& b);
             Fixed& operator=(const Fixed& other); // Copy assignment operator
             void    setRawBits(int const raw);
             int     getRawBits( void ) const ;
@@ -57,7 +66,7 @@ class Fixed
             ~Fixed();
 };
 
+
+
 std::ostream& operator<<(std ::ostream& out, const Fixed& obj);
-
-
 #endif
