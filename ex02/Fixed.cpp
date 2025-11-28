@@ -13,6 +13,32 @@
 
 #include "Fixed.h"
 
+
+
+const int Fixed::fractional_bits = 8;
+
+Fixed::Fixed(): value(0) {}
+
+Fixed::Fixed(const int value)
+{
+    this->value = value << fractional_bits;
+}
+
+Fixed::Fixed(const float value)
+{
+    this->value = roundf(value * (1 << fractional_bits));
+}
+
+            // void    setRawBits(int const raw);
+            // int     getRawBits( void ) const ;
+            // float toFloat( void ) const ;
+            // int     toInt( void ) const ; 
+
+float Fixed::toFloat( void ) const
+{
+    
+}
+
 Fixed Fixed::operator+(const Fixed& obj) const
 {
     Fixed result;
@@ -64,6 +90,7 @@ bool Fixed::operator<(const Fixed& obj) const
 {
     return(this->value < obj.value);
 }
+
 bool Fixed::operator>(const Fixed& obj) const 
 {
     return(this->value > obj.value);
@@ -84,7 +111,47 @@ Fixed& Fixed::operator--()
 Fixed Fixed::operator++(int)
 {
     Fixed temp;
-    this->value = temp.value;
-    temp.value++;
+    temp.value = this->value;
+    this->value++;
     return temp;
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed temp;
+    temp.value = this->value;
+    this->value--;
+    return temp;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+    if(a.value < b.value)
+        return a;
+    else 
+        return b;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+        if(a.value > b.value)
+        return a;
+    else 
+        return b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+    if(a.value > b.value)
+        return a;
+    else 
+        return b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+        if(a.value < b.value)
+        return a;
+    else 
+        return b;
 }
