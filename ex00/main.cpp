@@ -13,13 +13,16 @@
 
 
 #include "Fixed.h"
-
+#include <stdio.h>
 int main( void ) {
     Fixed a , d;
     Fixed b( a );
+    
     Fixed c;
+
     c = b ;
-    a = b = c;
+
+    a = b = c ;
     Fixed x;
     
     Fixed y(x);
