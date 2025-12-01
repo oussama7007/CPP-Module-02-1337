@@ -19,22 +19,19 @@ Fixed::Fixed(void) : value(0)
         std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const int value) 
+Fixed::Fixed(const int value) : value(value << fractional_bits)
 {
     std::cout << "Int constructor called" << std::endl;
-    this->value = value << fractional_bits;
 }
 
-Fixed::Fixed(const float value) 
+Fixed::Fixed(const float value) : value(roundf(value *(1 << fractional_bits)))
 {
     std::cout << "Float constructor called" << std::endl;
-    this->value = roundf(value *(1 << fractional_bits));
 }
 
-Fixed::Fixed(const Fixed& other)
+Fixed::Fixed(const Fixed& other) : value(other.value)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->value = other.value;
 }
 
 Fixed &Fixed::operator=(const Fixed& other)

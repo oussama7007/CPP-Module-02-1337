@@ -73,7 +73,7 @@ Fixed Fixed::operator-(const Fixed& obj) const
 Fixed Fixed::operator*(const Fixed& obj) const
 {
     Fixed result;
-    result.value = (long long)(this->value * obj.value) / (1 << fractional_bits);
+    result.value = ((long long)this->value * (long long)obj.value) / (1 << fractional_bits);
     return result;
 }
 
