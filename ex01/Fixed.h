@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:16:02 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/26 11:03:50 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:26:02 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ class Fixed
             int value;
             const static int fractional_bits;
         public:
-            Fixed(void); // default constructor
-            Fixed(const int value); // to converts it to the corresponding fixed-point value.
-            Fixed(const float value); // to converts it to corresponding fixed point value
-            Fixed(const Fixed& other); // copy constructor 
-               // operation overloading 
-            Fixed& operator=(const Fixed& other); // Copy assignment operator
+            Fixed(void); 
+            Fixed(const int value); 
+            Fixed(const float value); 
+            Fixed(const Fixed& other); 
+            
+            Fixed& operator=(const Fixed& other); 
             void    setRawBits(int const raw);
             int     getRawBits( void ) const ;
             float toFloat( void ) const ;
-            int     toInt( void ) const ; // that converts the fd point value to an int value
+            int     toInt( void ) const ; 
             ~Fixed();
 };
 

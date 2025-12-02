@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:59:26 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/11/27 17:19:28 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:26:25 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Fixed
             int value;
             const static int fractional_bits;
         public:
-            Fixed(void); // default constructor
+            Fixed(void);
             Fixed(const int value); // to converts it to the corresponding fixed-point value.
             Fixed(const float value); // to converts it to corresponding fixed point value
             Fixed(const Fixed& other); // copy constructor 
