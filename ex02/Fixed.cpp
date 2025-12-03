@@ -80,7 +80,10 @@ Fixed Fixed::operator*(const Fixed& obj) const
 Fixed Fixed::operator/(const Fixed& obj) const
 {
     Fixed result;
-    result.value = (this->value * (1 << fractional_bits)) / obj.value;
+    if(obj.value != 0)
+        result.value = (this->value * (1 << fractional_bits)) / obj.value;
+    else
+        std::cout << "You can not divide on 0" << std::endl;
     return result;
 }
 
